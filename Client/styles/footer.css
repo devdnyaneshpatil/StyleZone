@@ -1,0 +1,84 @@
+/* -----------------footer----------------------------- */
+
+.footer{
+    background: rgb(233, 230, 230);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  .footer a {
+    padding: 10px;
+    font-size: 30px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background: orangered;
+    color: white;
+  }
+  
+  .footer a:hover {
+      opacity: 0.7;
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+    .head img{
+      width: 300px;
+    }
+    .slide img{
+      width: 1000px;
+    }
+    .service{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .see{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media only screen and (max-width: 700px){
+    .client{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+    .slide img{
+      width: 650px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .head img{
+      display: flex;
+      flex-direction: column;
+    }
+    .head>div:nth-child(1){
+      width: 100%;
+    }
+    .service{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+    .see{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+    .slide{
+     display: none;
+    }
+    .footer{
+      display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    }
+
+  }
+  @media only screen and (max-width: 500px){
+    .head img{
+      display: none;
+    }
+  }
