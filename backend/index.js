@@ -2,11 +2,13 @@ const express=require("express")
 const connection= require("./db")
 const specialistRouter=require("./routes/specialist.routes")
 const serviceRouter=require("./routes/service.routes")
+const userRouter = require("./routes/user.routes")
 //const cors= require("cors")
 const app=express()
 
 //app.use(cors())
 app.use(express.json())
+app.use("/user",userRouter)
 app.use("/specialist",specialistRouter)
 app.use("/service",serviceRouter)
 

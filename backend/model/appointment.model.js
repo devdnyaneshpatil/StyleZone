@@ -1,25 +1,21 @@
 const mongoose = require('mongoose');
-//const userModel = require('./user.model');
 const SpecialistModel = require('./specialist.model');
-
-//const {UserInfo}  = require('./user.model')
+const UserModel  = require('./user.model')
 
 const appointmentSchema = mongoose.Schema({
     date: { type: String },
-    time: { type: String, enum: ["11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM"]},
-    stylistID: {
+    time: { type: String, enum: ["11AM-12AM", "12AM-1PM",  "4PM-5PM", "5PM-6PM", "6PM-7PM"]},
+    specialistID: {
         type: mongoose.Schema.Types.ObjectId,
         ref: SpecialistModel,
         required: true
     },
     status : {type : String, enum: ["Pending", "Cancel", "Reject", "Confirm"], default:"Pending"},
-    customerID : {
+    userID : {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "UserInfo",
+        ref: "UserModel",
         required: true
     },
-    name:{type:String},
-    image:{type:String},
     service:{type:String}
 }, {
     versionKey: false,

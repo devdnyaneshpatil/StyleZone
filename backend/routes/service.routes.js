@@ -59,7 +59,6 @@ serviceRouter.post("/update/:id",auth,async(req,res)=>{
 })
 
 
-s
 //Route for Deleting the service By the particular Specialist.
 serviceRouter.delete("/update/:id",auth,async(req,res)=>{
     const serviceId=req.params.id
